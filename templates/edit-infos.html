@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card card-body">
+        <form action="/update/{{infos.0}}" method="POST">
+           <div class="form-group">
+            <input type="text" name="id_number" value="{{infos.1}}" class="form-control" placeholder="ID Number - EX. 2018-0000" maxlength="25" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="fullname" value="{{infos.2}}" class="form-control"  placeholder="Full Name" maxlength="25" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="course" value="{{infos.3}}" class="form-control" placeholder="Course - EX. BSCS" maxlength="25" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="year_level" value="{{infos.4}}" class="form-control" placeholder="Year Level - EX. 4th Year" maxlength="25" required>
+          </div>
+          <div class="form-group">
+            <input type="text" name="email" value="{{infos.5}}" class="form-control" placeholder="Email - EX. user@gmail.com" maxlength="25" required>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
